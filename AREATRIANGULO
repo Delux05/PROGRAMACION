@@ -1,0 +1,21 @@
+#include "stdfx.h""
+#include<iostream>
+#include<cmath>
+#include "conio.h"
+using namespace std;
+
+
+int main() {
+	float a,b,c,area,p,raiz;
+	cout << "Ingrese Lado A:" << endl;
+	cin >> a;
+	cout << "Ingrese Lado B:" << endl;
+	cin >> b;
+	cout << "Ingrese Lado C:" << endl;
+	cin >> c;
+	p = (a+b+c)/2;
+	area = sqrtf(p*(p-a)*(p-b)*(p-c));
+	cout << "El area es:" << area << endl;
+	getch ();
+	return 0;
+}
