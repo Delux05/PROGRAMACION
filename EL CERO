@@ -1,0 +1,25 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+
+int main() 
+{
+	int A;
+	cout << "Escribir un NUMERO:";
+	cin >> A;
+	if (A>0)
+	   cout << "El numero es positivo";
+	else
+	
+         if (A==0)
+         cout<< "ES cero";
+ 	else 	
+		cout << "El numero es negativo";
+	
+	getch();
+	return 0;
+	
+}
