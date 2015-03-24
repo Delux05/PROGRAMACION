@@ -1,0 +1,37 @@
+// 100NF.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main ()
+{
+	float P1,P2,P3,TP,PR,TPR,F,TF,NF,N,I;
+	cout<<"introducir el Nº de estudiante:";
+	cin>>N;
+	for(I=1; I<=N; I++)
+    {
+    cout<<"ingrese la nota del primer parcial:";
+	cin>> P1;
+    cout<<"ingrese la nota del segundo parcial:";
+	cin>> P2;
+    cout<<"ingrese la nota del tercel parcial:";
+	cin>> P3;
+    TP=((P1+P2+P3)/3)*0.4;
+	cout<<"ingrese la nota practica:";
+	cin>>PR;
+	TPR=(PR*0.2);
+    cout<<"ingrese la nota del final:";
+	cin>>F;
+	TF=(F*0.4);
+    NF=(TP+TPR+TF);
+	cout<<"la nota final es:"<<NF;
+	}
+
+	getch();
+    return 0;
+}
+
