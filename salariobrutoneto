@@ -1,0 +1,31 @@
+// 100NF.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+int main ()
+{
+	float SB,SN,N,HT,PH,IVA=0.13,I ;
+	cout<<"ingrese el numero de trabajadores:";
+	cin>>N;
+	
+	for (I=1;I<=N;I++)
+	{
+	cout<<"ingrese las horas trabajadas:";
+	cin>>HT;
+	cout<<"El precio de horas trabajadas es de 50$"<<endl;
+	PH=50;
+	SB=(HT*PH);
+	cout<<"el salario bruto es:"<<SB<<endl;
+	IVA=0.13;
+	SN=SB-(SB*IVA);
+	cout<<"el salario neto es:"<<SN<<endl;
+	}
+	getch();
+    return 0;
+}
+
