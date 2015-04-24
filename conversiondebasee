@@ -1,0 +1,33 @@
+// convertirbase r.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+using namespace std;
+
+void main()
+{
+float r,i,cajita,signo,d;
+int n;
+cout<<"ingrese el numero y la base que desea,dentro del rango: ";
+cin>>n;
+	do {cout<<"ingrese la base: ";
+		cin>>r;
+
+	   }
+	while ((r<=1)||(r>=10));
+		cajita=0;
+		i=0;
+	while(n>0)
+	{
+		d=n%10;
+		n=n/10;
+		cajita=cajita+(d*pow(r,i));
+		i=i+1;
+	
+	}
+    cout<<"la conv es:"<<cajita;
+	getch();
+}
