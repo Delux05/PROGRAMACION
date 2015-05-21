@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+float MCD(float a,float b);
+void main()
+{
+	int a,b,Llamada;
+	cout<<"ingrese el valor para a: ";
+	cin>>a;
+	cout<<"ingrese le valor para b:";
+	cin>>b;
+	 Llamada=MCD(a,b);
+	cout<<"el MCD :"<<Llamada;
+	getch();
+}
+float MCD(float a,float b)
+	{int mayor,menor,cajita=1,i=2;
+     if(a<b)
+	 {
+	 menor=a;
+	 mayor=b;
+	 }
+	 else
+	 { 
+		menor=b;
+	    mayor=a;
+	 }
+	 do{
+		 if(menor%i==0 && mayor%i==0)
+		 {
+			 cajita=cajita*i;
+			 menor=menor/i;
+			 mayor=mayor/i;
+		 }
+		 else{i++;}
+	 }	
+	 while(i<=menor);
+	 return cajita;
+}
