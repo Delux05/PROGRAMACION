@@ -1,0 +1,68 @@
+#include "stdafx.h"
+#include "conio.h"	
+#include <iostream>
+
+using namespace std;
+float farenhit(float c);
+float celcius(float f);
+float kelvin(float c);
+
+
+int main()
+{ float f,k,c,e;
+  int op;
+	do{
+	cout<<"----------Menu------"<<endl;
+	cout<<"1.-FARENHIT"<<endl;
+	cout<<"2.-CELCIUS"<<endl;
+	cout<<"3.-KELVIN"<<endl;
+	cout<<"4.-SALIR"<<endl;
+	cin>>op;
+	
+	
+	switch (op)
+	{
+	case 1: cout<<"Ingrese grados centigrados: ";
+			cin>>c;	
+			f=farenhit(c);
+			cout<<"La conversion es:"<<f;
+			break;
+	case 2: cout<<"Ingrese grados farenhit: ";	
+			cin>>f;
+			c=celcius(f);
+			cout<<"La conversion es: "<<c;
+			break;
+	case 3:	cout<<"Ingrese grados celcius: ";
+			cin>>c;
+			k=kelvin(c);
+			cout<<"La conversion es: "<<k;
+			break;
+	case 0: cout<<"SALIR";
+			break;
+	}
+ getch();
+ system ("cls");
+}while(op!=0);
+
+getch ();
+}
+float farenhit(float c)
+{
+	float f;
+	f=c*(9/5)+32;
+	return f;
+}
+float celcius(float f)
+{
+	float c;
+	c=(f-32)/(1.8);
+	return c;
+}
+float kelvin(float c)
+{
+
+	float k;
+	k=c+273.15;
+	return k;
+
+}
