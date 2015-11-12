@@ -1,0 +1,104 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+float aprob(float n);
+float reprob(float n);
+float mejor(float n);
+
+int main ()
+{
+	int n,op,a,r,m;
+	cout<<"-------MENU------"<<endl;
+	cout<<"1.-PROMEDIO DE APROBADOS"<<endl;
+	cout<<"2.-PROMEDIO DE REPROBADOS"<<endl;
+	cout<<"3.-NOTA MEJOR ALUMNO"<<endl;
+	cout<<"4.-SALIR"<<endl;
+	cin>>op;
+	switch (op)
+	{
+	case 1:
+		{	cout<<"La cantidad de estudiantes:";
+			cin>>n;
+			a= aprob (n);
+			cout<<"EL PROMEDIO DE APROBADOS ES: "<<a;
+		}break;
+		
+	case 2:
+		{	cout<<"La cantidad de estudiantes:";
+			cin>>n;
+			r= reprob (n);
+			cout<<"El promedio de reprobados es: "<<r;
+		}break;
+		
+	case 3:
+		{	cout<<"La cantidad de estudiantes:";
+			cin>>n;
+			m=mejor(n);
+			cout<<"La nota del mejor alumno es "<<m;
+		}break;
+		
+	case 4:
+		{
+			cout<<"Salir";
+		}break;
+		
+		getch();
+	}
+
+float aprob(float n)
+{
+	int nota,i=1,ca=0;
+	float pa,s=0;
+	while(i<=n)
+	{
+	cout<<"INGRESE LAs NOTAS:";
+	cin>>nota;
+		if(nota>=51)
+		{
+			s=s+nota;
+			ca=ca+1;
+		}
+		i=i+1;
+	}
+	pa=s/ca;
+	return pa;
+}
+float reprob(float n)
+{
+	int nota,i=1,cr=0;
+	float pr,s=0;
+	while(i<=n)
+	{
+	cout<<"INGRESE LAs NOTAS:";
+	cin>>nota;
+
+		if(nota<=51)
+		{
+			s=s+nota;
+			cr=cr+1;
+		}
+		i=i+1;
+	}
+	pr=s/cr;
+	return pr;
+}
+float mejor(float n)
+{
+	int i=1,nota,mejor=0;
+	
+	while(i<=n)
+	{
+	cout<<"INGRESE LAS NOTAS: ";
+	cin>>nota;
+		if(nota>mejor)
+		{
+			mejor=nota;
+		}
+		i=i+1;
+	}
+
+	return mejor;
+}
+
