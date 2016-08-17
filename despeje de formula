@@ -1,0 +1,23 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void main(){
+	float a,b,c,d,e,f,x,y;
+	cout<<"ingrese un valor para a: ";
+	cin>>a;
+	cout<<"ingrese un valos para b: ";
+	cin>>b;
+	cout<<"ingrese un valos para d: ";
+	cin>>d;
+	cout<<"ingrese un valos para e: ";
+	cin>>e;
+	cout<<"ingrese un valos para c: ";
+	cin>>c;
+	cout<<"ingrese un valos para f: ";
+	cin>>f;
+	y=(a*f-d*e)/(a*f-b*d);
+	x=(c-b*y)/a;
+	cout<<"el resultado es -----"<<y<<endl;
+	cout<<x;
+	getch();
+	}
