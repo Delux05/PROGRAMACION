@@ -1,0 +1,17 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+void main(){
+	float a,b,c,s,p;
+	cout<<"ingrese un numero para a:";
+	cin>>a;
+	cout<<"ingrese un numero para b:";
+	cin>>b;
+	cout<<"ingrese un numero para c:";
+	cin>>c;
+	s=a+b+c;
+	p=s/3;
+	cout<<"el promedio de los 3 numeros es---->>>"<<p;
+	getch();
+}
