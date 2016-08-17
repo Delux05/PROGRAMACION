@@ -1,0 +1,16 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void main(){
+	float a,b,c,s,is;
+	cout<<"ingrese los datos de la capital: ";
+	cin>>a;
+	cout<<"ingrese los datos del periodo: ";
+	cin>>b;
+	cout<<"ingrese los datos de la tasa : ";
+	cin>>c;
+	s=a+b+c;
+	is=s/360;
+	cout<<"el interes simples es --->>:"<<is;
+	getch();
+}
