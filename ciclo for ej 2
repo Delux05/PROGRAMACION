@@ -1,0 +1,18 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+void main(){
+	int n,i;
+	float c,s,d;
+	cout<<"ingrese cuantos trabajadores: ";
+	cin>>n;
+	for(i=0;i<n;i++){
+		cout<<"ingrese el salario bruto del trabajador: ";
+		cin>>s;
+		cout<<"ingrese el descuento: ";
+		cin>>d;
+		c=c+(s/0.13)*d;
+	}
+	cout<<"el total de salio neto es--->>"<<c;
+	getch();
+}
